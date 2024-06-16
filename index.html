@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<script src="https://172-233-208-160.ip.linodeusercontent.com:3000/demos/butcher/index.html"></script>
+<script>
+    // JavaScript를 사용하여 화면 크기를 확인하고 리다이렉트를 수행합니다.
+    window.onload = function() {
+        // 현재 화면의 너비를 가져옵니다.
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        // 화면의 너비가 800px보다 크면 PC 버전 페이지로 리다이렉트합니다.
+        if (screenWidth >= 800) {
+            window.location.href = 'pc.html';
+        } else { // 그렇지 않으면 모바일 버전 페이지로 리다이렉트합니다.
+            window.location.href = 'mobile.html';
+        }
+    };
+</script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
