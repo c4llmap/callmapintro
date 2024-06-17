@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .menu .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        .menu-items {
+            display: flex;
+        }
+
+        .container{
+            margin-top: 15%;
+            margin-right: 3%;
+            margin-left: 3%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h2{
+            font-weight: bold;
+        }
+
+        img{
+            border: 0px;
+            border-radius: 15px;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu-items a {
+                padding: 10px 20px;
+                border-top: 1px solid #444;
+            }
+
+            .menu .hamburger {
+                display: block;
+            }
+
+            .menu-items.active {
+                display: flex;
+            }
+
+            .menu-items.active + .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="brand">
+            <a href="mobile.html">AD_ASTRA</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-items">
+            <a href="CallMap.html">CallMap?</a>
+            <a href="why.html">왜 CallMap 인가</a>
+            <a href="tool.html">기능</a>
+            <a href="CallMapfuture.html">CallMap의 포부</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h3><b style="font-size: 4rem; color: dodgerblue;">01. </b> <b style="font-size: 1.2rem;">심플하게! 단순하게!</b></h3>
+        <img src="1.png" style="width: 250px; height: 400px;" class="imgcontainer" alt="">
+        <h3>CallMap의 <b style="color: dodgerblue;">모토</b>이자 <b style="color: dodgerblue;">근본</b>이라 할 수 있는 개념이라고 생각합니다.<br><br>CallMap은 어플의 <b style="color: dodgerblue;">초기 진입장벽</b> 없이 사용 할수 잇도록 모든 UI를 <br><b style="color: dodgerblue;">지관적이고 간편</b>하게 설계 했습니다.</h3>
+
+        <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px; margin-top: 10%; margin-bottom: 5%;">
+
+        <h3><b style="font-size: 4rem; color: dodgerblue;">02. </b> <b style="font-size: 1.2rem;">시각과 청각의 활용</b></h3>
+        <img src="combine.jpg" style="width: 250px; height: 400px;" class="imgcontainer" alt="">
+        <h3>현재 위치에서 <b style="color: dodgerblue;">주변의 시설</b>들을 <b style="color: dodgerblue;">음성</b>으로 전달하여, 시각적 제한이 있는 사용자들도<br> 주변환경을 쉽게 파악 가능하며, <br><br>사용자가 직접 자신의 보이스로 <b style="color: dodgerblue;">도착지와 기타 서비스</b>를 사용 할수 있습니다.</h3>
+
+        <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px; margin-top: 10%; margin-bottom: 5%;">
+
+        <h3><b style="font-size: 4rem; color: dodgerblue;">03. </b> <b style="font-size: 1.2rem;">초행길도 당당히!</b></h3>
+        <img src="lockCombine.jpg" style="width: 300px; height: 350px;" class="imgcontainer" alt="">
+        <h3>사용자의 <b style="color: dodgerblue;">인지적 한계M</b>와 <b style="color: dodgerblue;">초행길</b>에 대한 두려움을 인식하고, 핸드폰의 <b style="color: dodgerblue;">락스크린<br>(잠금화면)</b>을 이용한 비상전화 기능입니다.<br><br> 잠금화면을 <b style="color: dodgerblue;">3번</b> 클릭시 저장된 보호자에게 자동으로 연결 해주는 기능으로,<br> 사용자의 <b style="color: dodgerblue;">편의성</b>을 더했습니다.</h3>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('active');
+
+            const hamburger = document.querySelector('.hamburger');
+            if (menuItems.classList.contains('active')) {
+                hamburger.style.display = 'none';
+            } else {
+                hamburger.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>

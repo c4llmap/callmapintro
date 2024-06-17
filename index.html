@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <title>CallMap을 소개합니다!</title>
+    <style>
+        body {
+            font-family: "Century Gothic", 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .et-hero-tabs,
+        .et-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            background: #eee;
+            text-align: center;
+            padding: 0 2em;
+        }
+
+        .et-hero-tabs h1,
+        .et-slide h1 {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 1rem;
+        }
+
+        .et-hero-tabs h3,
+        .et-slide h3 {
+            font-size: 1rem;
+            letter-spacing: 0.3rem;
+            opacity: 0.6;
+        }
+
+        .et-hero-tabs-container {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            z-index: 10;
+        }
+
+        h3{
+            color: #000;
+            font-weight: bold;
+        }
+        h4{
+            word-break: break-all;
+        }
+
+        .img_grid{
+            display: grid;
+            grid-gap: 5%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .img{
+            width: 180px; 
+            height: 300px; 
+            margin-top: 20px; 
+            margin-bottom: 20px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            grid-gap: 3%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .con{
+            width: 100%;
+            height: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            float: center;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        .imgcontainer{
+            margin-left: 50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 100px;
+            border: 0px solid;
+            border-radius: 15px;
+            box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+            -webkit-box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: 2px 1px 22px -1px rgba(0, 0, 0, 0.7);
+        }
+
+        .et-hero-tabs-container--top {
+            position: fixed;
+            top: 0;
+        }
+
+        .et-hero-tab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            color: #000;
+            letter-spacing: 0.1rem;
+            transition: all 0.5s ease;
+            font-size: 0.8rem;
+        }
+
+        .et-hero-tab:hover {
+            color: white;
+            background: rgba(102, 177, 241, 0.8);
+            transition: all 0.5s ease;
+        }
+
+        .et-hero-tab-slider {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 6px;
+            background: #66B1F1;
+            transition: left 0.3s ease, width 0.3s ease;
+        }
+
+        @media (min-width: 800px) {
+            .et-hero-tabs h1,
+            .et-slide h1 {
+                font-size: 3rem;
+            }
+
+            .et-hero-tabs h3,
+            .et-slide h3 {
+                font-size: 1rem;
+            }
+
+            .et-hero-tab {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="et-hero-tabs" style="background-image: url('background.png');background-repeat: no-repeat;background-size: cover;">
+        <div class="et-hero-tabs-container">
+            <a class="et-hero-tab" href="#tab-es6">CallMap ?</a>
+            <a class="et-hero-tab" href="#tab-flexbox">왜 CallMap 인가</a>
+            <a class="et-hero-tab" href="#tab-react">기능</a>
+            <a class="et-hero-tab" href="#tab-angular">CallMap의 포부</a>
+            <!--a class="et-hero-tab" href="#tab-other">Other</a-->
+            <span class="et-hero-tab-slider"></span>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <main class="et-main">
+        <section class="et-slide" id="tab-es6">
+            <h1>CallMap?</h1>
+            <img src="callmap_banner_design.jpg" style="width: 180px; height: 300px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+            <h3>손쉽고, 간편하게 호출할수 있는 지도어플, CallMap을 소개 드립니다.<br>CallMap의 타겟 고객(고령층)의 신체적, 인지적 특성에 맞추어 각종 편의 기능을 갖춘,<br> <b style="color: dodgerblue;">"심플","간단","편리"</b> 3가지 중점적인 특징을 가진 어플 입니다.</h3>
+        </section>
+
+
+        <section class="et-slide" id="tab-flexbox" style="background-color: rgba(0, 0, 0, 0.1);">
+            <h1>왜 CallMap 인가</h1>
+            <h3>CallMap은 고령층의 신체적, 인지적 한계를 인지하고 이에 맞추어 설계된 지도어플 입니다.<br>어플의 전체적인 디자인을 심플하고 단순하게 구성하여 초반 진입장벽을 낮추었으며,<br>CallMap의 사용자가 길을 찾아 가는대에 필요한 보이스 지원, 주변의 편의기능(화장실, 버스 정류장) 자동 서치, 매우 간결한 플로우등<br>어플 사용에 대한 기초지식 없이도 모든 편리 서비스를 지원할 수 있도록 설계 되었습니다.</h3>
+            <div class="img_grid">
+                <img src="1.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+                <img src="2.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+                <img src="3.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+            </div>
+        </section>
+
+
+        <section class="et-slide" id="tab-react" style="margin-top: auto; height: auto;">
+            <div class="con">
+                <div class="grid" style="margin-left: 5%;">
+                    <h4 style="margin-left: 15%; width: 100%;"><b style="font-size: 4rem; color: dodgerblue;">01. </b><b style="font-size: 1.2rem;">심플하게! 간단하게!</b>&nbsp; CallMap의 모토이자 근본이라 할 수 있는 개념이라고 생각 합니다.<br>CallMap은 어플의 초기 진입장벽 없이 사용 할수 있도록<br> 모든 UI를 직관적이고 간편하게 설계 했습니다.</h4>
+                    <img src="1.png" style="width: 250px; height: 400px; float: right; margin-left: 20%;" class="imgcontainer" alt="">
+                </div>
+            </div>
+            
+            <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px;">
+        
+            <div class="con">
+                <div class="grid" style="margin-left: 5%;">
+                    <img src="combine.jpg" alt="" style="width: 300px; height: 400px; float: right; margin-left: 40%;" class="imgcontainer">
+                    <h4 style="font-size: 1rem; margin-right: 40%;">현재 위치에서 주변의 시설들을 <b style="font-size: 1.2rem; color: dodgerblue;">음성</b>으로 전달하여, &nbsp;<b style="font-size: 4rem; color: dodgerblue;">.02</b><br>시각적 제한이 있는 사용자들도 <b style="font-size: 1.2rem; color: dodgerblue;">주변 환경</b>을 쉽게 파악가능하며,<br>사용자가 직접 자신의 보이스로 도착지와 기타 서비스를<br>사용 할수 있습니다.</h4>
+                </div>
+            </div>
+        
+            <hr style="width: 90%; border: 1px solid dodgerblue; font-size: 2px;">
+        
+            <div class="con">
+                <div class="grid" style="margin-left: 5%;">
+                    <h4 style="margin-left: 5%; width: 100%;"><b style="font-size: 4rem; color: dodgerblue;">03. </b><b style="font-size: 1.2rem;">길을 잃을 걱정없이! </b>&nbsp; 사용자의 인지적 한계와 초행길에 대한 두려움을 인식하고,<br>핸드폰의 락스크린(잠금화면)을 이용한 비상전화 기능 입니다.<br>잠금화면을 3번 클릭시 저장된 보호자에게 자동으로 연결 해주는 기능으로, 사용자의 편의성을 더했습니다.</h4>
+                    <img src="lockCombine.jpg" style="width: 500px; height: 400px; float: right; margin-left: 10%;" class="imgcontainer" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="et-slide" id="tab-angular" style="background-color: rgba(0, 0, 0, 0.1);">
+            <h1>CallMap은 앞으로 이렇게 나아갈 것입니다.</h1>
+            <h3>아 요건 뺌이가 써줘 난 지금 머리가 안돌아가 ㅠㅠ</h3>
+        </section>
+        <!--section class="et-slide" id="tab-other">
+            <h1>Other</h1>
+            <h3>something about other</h3>
+        </section-->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        class StickyNavigation {
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                let self = this;
+                $('.et-hero-tab').click(function(event) {
+                    self.onTabClick(event, $(this));
+                });
+                $(window).scroll(() => { this.onScroll(); });
+                $(window).resize(() => { this.onResize(); });
+            }
+
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+                $('html, body').animate({ scrollTop: scrollTop }, 600);
+            }
+
+            onScroll() {
+                this.checkTabContainerPosition();
+                this.findCurrentTabSelector();
+            }
+
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+
+            checkTabContainerPosition() {
+                let offset = $('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight;
+                if ($(window).scrollTop() > offset) {
+                    $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top');
+                } else {
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top');
+                }
+            }
+
+            findCurrentTabSelector() {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $('.et-hero-tab').each(function() {
+                    let id = $(this).attr('href');
+                    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                    let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                    if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                        newCurrentId = id;
+                        newCurrentTab = $(this);
+                    }
+                });
+                if (this.currentId != newCurrentId || this.currentId === null) {
+                    this.currentId = newCurrentId;
+                    this.currentTab = newCurrentTab;
+                    this.setSliderCss();
+                }
+            }
+
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+                if (this.currentTab) {
+                    width = this.currentTab.css('width');
+                    left = this.currentTab.offset().left;
+                }
+                $('.et-hero-tab-slider').css('width', width);
+                $('.et-hero-tab-slider').css('left', left);
+            }
+        }
+
+        new StickyNavigation();
+
+
+// mobile redirect script
+    window.onload = function() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (screenWidth >= 800) {
+            window.location.href = '#';
+        } else { 
+            window.location.href = 'mobile.html';
+        }
+    };
+    </script>
+</body>
+</html>

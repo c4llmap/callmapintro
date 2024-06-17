@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .menu .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        .menu-items {
+            display: flex;
+        }
+
+        .container{
+            margin-top: 15%;
+            margin-right: 3%;
+            margin-left: 3%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h2{
+            font-weight: bold;
+        }
+
+        .grid{
+            grid-template-columns: repeat(1, 1fr);
+            width: 180px; 
+            height: 300px; 
+            margin-top: 20px; 
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        img{
+            border: 0px;
+            border-radius: 15px;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            margin-left: 35%;
+        }
+
+        @media (max-width: 768px) {
+            .menu-items {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .menu-items a {
+                padding: 10px 20px;
+                border-top: 1px solid #444;
+            }
+
+            .menu .hamburger {
+                display: block;
+            }
+
+            .menu-items.active {
+                display: flex;
+            }
+
+            .menu-items.active + .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="brand">
+            <a href="mobile.html">AD_ASTRA</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu-items">
+            <a href="CallMap.html">CallMap?</a>
+            <a href="why.html">왜 CallMap 인가</a>
+            <a href="tool.html">기능</a>
+            <a href="CallMapfuture.html">CallMap의 포부</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>왜 CallMap 인가</h2>
+        <h3>CallMap은 고령층의 <b style="color: dodgerblue;">신체적, 인지적</b> 한계를 인지하고 이에 맞추어 설계된<br> 지도어플 입니다.<br><br>어플의 전체적인 디자인을 <b style="color: dodgerblue;">심플하고 단순</b>하게 구성하여 초반 진입장벽을 낮추었으며,<br><br>CallMap의 사용자가 길을 찾아 가는대 필요한 <b style="color: dodgerblue;">보이스 지원, 주변의 편의기능(화장실, 버스 정류장) 자동 서치, 매우 간결한 플로우</b>등<br><br>어플 사용에 대한 기초지식 없이도 모든 편리 서비스를 지원할 수 있도록 설계 되었습니다.</h3>
+        <div class="grid">
+            <img src="1.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+                <img src="2.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+                <img src="3.png" style="width: 250px; height: 400px; margin-top: 20px; margin-bottom: 20px  ;" alt="">
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('active');
+
+            const hamburger = document.querySelector('.hamburger');
+            if (menuItems.classList.contains('active')) {
+                hamburger.style.display = 'none';
+            } else {
+                hamburger.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
