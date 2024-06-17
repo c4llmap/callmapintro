@@ -228,6 +228,17 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        // mobile redirect script
+    window.onload = function() {
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if (screenWidth >= 800) {
+            window.location.href = '#';
+        } else { 
+            window.location.href = 'mobile.html';
+        }
+    };
+    </script>
+    <script>
         class StickyNavigation {
             constructor() {
                 this.currentId = null;
@@ -300,17 +311,6 @@
         }
 
         new StickyNavigation();
-
-
-// mobile redirect script
-    window.onload = function() {
-        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (screenWidth >= 800) {
-            window.location.href = '#';
-        } else { 
-            window.location.href = 'mobile.html';
-        }
-    };
     </script>
 </body>
 </html>
